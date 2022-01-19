@@ -1,0 +1,31 @@
+{% extends 'WEBAPP/base.html' %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0">
+     <img src="static/con3.png " class="d-block w-100 " alt="...">
+</div>
+
+<div class="container my-4">
+    <h1 class="text-center">Contact me</h1>
+    <form method="post" action="contact">
+        {% csrf_token %}
+    <div class="mb-3">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="enter your name">
+   </div>
+    <div class="mb-3">
+      <label for="name">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="enter your email">
+   </div>
+    <div class="mb-3">
+      <label for="name">Phone</label>
+      <input type="text" class="form-control" id="phone" name="phone" placeholder="enter your phone">
+   </div>
+    <div class="mb-3">
+      <label for="desc">Message</label>
+        <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+   </div>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+{% endblock body %}
